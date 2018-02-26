@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body ng-app="app">
+    <div ng-controller="FormController as form">
+        <!-- <h1>ToDo List</h1>
+        <p>form ng-submit="form.addItem(form.item)">
+         place to store the things you have to do!</p> -->
+    
+            <task-form></task-form>
+            
+        <!-- <input type="text" placeholder="Filter your to-dos" ng-model="todoFilter">
+        <ol>
+           <li ng-repeat="item in form.todoList | filter: todoFilter track by $index"> {{item}} 
+            <i class="material-icons" ng-click="form.remove(form.index)">close</i>
+           </li>
+        </ol>
+        <input id="addToDo" type="text" placeholder="Add your to-do" ng-model="form.item"><br>
+        <button type="submit">Add</button> -->
+        <!-- </form>  -->
+    </div>
+                
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/controller.js"></script>
+    <script src="components/taskForm.js"></script>
+    <script src="components/taskList.js"></script>
+</body>
+</html>

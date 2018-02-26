@@ -1,0 +1,11 @@
+<h1>ToDo List</h1>
+<p>place to store the things you have to do!</p>
+<form>
+<input type="text" placeholder="Filter your to-dos" ng-model="todoFilter">
+    <ol>
+        <li ng-repeat="item in form.todoList | filter: todoFilter track by $index"> {{item}} 
+        <i class="material-icons" ng-click="form.remove(form.index)">close</i>
+        </li>
+    </ol>
+<input id="addToDo" type="text" placeholder="Add your to-do" ng-model="form.item"><br>
+</form>
