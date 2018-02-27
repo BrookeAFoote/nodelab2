@@ -12,7 +12,7 @@
     }//formcontroller
 
     angular
-     .module("app")
+     .module("todoModule")
      .controller("FormController", FormController);
 
 })();
