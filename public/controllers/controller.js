@@ -1,9 +1,12 @@
 (function(){
     function FormController() {
         var vm= this;
-        vm.todoList= [];
-        vm.addItem= function(item) {
-            vm.todoList.push(item);
+        todoService.getAllTasks().then(function(tasks){
+            vm.todoList= tasks;
+        })
+    
+        vm.addTask= function(task) {
+            vm.todoList.push(task);
             document.getElementById("addToDo").value="";
         }//item
         vm.remove= function(index){
