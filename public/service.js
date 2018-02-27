@@ -1,21 +1,23 @@
 (function(){
     function todoService() {
-        var savedWordsObj = {};//empty object
+        var savedWordsObj = {};
          return {
-             getTasks: getTasks,//calling object
+             getTasks: getTasks,
              addTask: addTask,
              removeTask: removeTask
-         }//return
+         }
          
-         function getWords(wordsObj){
+         function getTasks(wordsObj){
              savedWordsObj = wordsObj;
              console.log(savedWordsObj);
-         }//getword
+         }
          
-         function sendWords(){
+         function addTasks(){
              return savedWordsObj;
-         }//sendwords
-     }//storyservice
+         }
+         
+         function removeTask(){}
+     }
  
  
  angular
