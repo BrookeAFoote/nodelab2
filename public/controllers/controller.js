@@ -3,14 +3,20 @@
         var vm= this;
         todoService.getAllTasks().then(function(tasks){
             vm.todoList= tasks;
-        })
+        });
     
-        vm.addTask= function(task) {
-            vm.todoList.push(task);
-            document.getElementById("addToDo").value="";
-        }//item
-        vm.remove= function(index){
-            vm.todoList.splice(index, 1);
+        vm.setTask= function(newTaskText) {
+            var newTask = {
+                text: newTaskText
+            };
+            todoService.addTask(newTask).then(function(){
+                refreshDataFromServer();
+            });
+        }
+        vm.removeTask= function(task){
+            todoService.deleteTask(task.id).then(function(tasks){
+                vm.todoList = tasks;
+            })
         }//remove
     }//formcontroller
 
