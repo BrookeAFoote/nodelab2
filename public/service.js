@@ -1,9 +1,10 @@
 (function() {
     var todoService = function($http) {
-
-        this.getAllTasks = getAllTasks;
-        this.addTask = addTask;
-        this.deleteTask = deleteTask;
+        return{
+        getAllTasks: getAllTasks;
+        addTask: addTask;
+        deleteTask: deleteTask;
+        }
 
         function getAllTasks() {
             return $http({
@@ -28,7 +29,7 @@
             return $http({
                 method: "DELETE",
                 url: "/tasks/" + taskId
-            });
+            }).then
         };
 
     }
