@@ -1,9 +1,9 @@
 (function() {
     var todoService = function($http) {
         return{
-        getAllTasks: getAllTasks;
-        addTask: addTask;
-        deleteTask: deleteTask;
+        getAllTasks: getAllTasks,
+        addTask: addTask,
+        deleteTask: deleteTask,
         }
 
         function getAllTasks() {

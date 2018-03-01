@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var inMemoryDatabase = require("./in-memory-database");
+var pool = require("./pg-connection-pool");
 
 var toDoTask = inMemoryDatabase();
 toDoTask.init([
